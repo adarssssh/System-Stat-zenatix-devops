@@ -7,5 +7,5 @@
 
 **Data-6 is an updated index**
 
-*Using Data-6 implemented memoray and cpu usage per timestamp*
+*Using Data-6 implemented memoray and cpu usage Timechart widget*
 
