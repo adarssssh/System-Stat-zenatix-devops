@@ -1,0 +1,46 @@
+{
+  "test-index": {
+    "aliases": {},
+    "mappings": {
+      "properties": {
+        "cpu_percent": {
+          "type": "float"
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "pid": {
+          "type": "long"
+        },
+        "vms": {
+          "type": "float"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "routing": {
+          "allocation": {
+            "include": {
+              "_tier_preference": "data_content"
+            }
+          }
+        },
+        "number_of_shards": "1",
+        "provided_name": "test-index",
+        "creation_date": "1635515634897",
+        "number_of_replicas": "1",
+        "uuid": "KhBinVS0Rvu4R7FsR8CmKg",
+        "version": {
+          "created": "7150199"
+        }
+      }
+    }
+  }
+}
