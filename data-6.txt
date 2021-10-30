@@ -1,0 +1,49 @@
+{
+  "data-6": {
+    "aliases": {},
+    "mappings": {
+      "properties": {
+        "cpu_percent": {
+          "type": "float"
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "pid": {
+          "type": "long"
+        },
+        "timestamp": {
+          "type": "long"
+        },
+        "vms": {
+          "type": "float"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "routing": {
+          "allocation": {
+            "include": {
+              "_tier_preference": "data_content"
+            }
+          }
+        },
+        "number_of_shards": "1",
+        "provided_name": "data-6",
+        "creation_date": "1635605319531",
+        "number_of_replicas": "1",
+        "uuid": "z-RZYclkSWSuHJ9qLzqyXg",
+        "version": {
+          "created": "7150199"
+        }
+      }
+    }
+  }
+}
