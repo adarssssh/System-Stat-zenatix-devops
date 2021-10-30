@@ -37,7 +37,7 @@ if __name__ == "__main__":
             result = es.index(index="test-index", body=elem)
             #es.index(index="data",body=)
             print(result['result'])
-            #Chech the values
+            #Check the values
             #print(elem)
         #mem = psutil.virtual_memory()
     time.sleep(1)
