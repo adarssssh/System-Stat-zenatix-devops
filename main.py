@@ -14,6 +14,9 @@ def Process():
             # Fetch process details as dict
             pinfo = process.as_dict(attrs=['pid', 'name','cpu_percent'])
             pinfo['vms'] = process.memory_info().vms / (1024 * 1024)
+            localtime = time.localtime(time.time())
+            timestamp = int(localtime.tm_sec)
+            pinfo['timestamp']=timestamp
             # Append dict to list
             listOfProcess.append(pinfo)
         except(psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
@@ -34,11 +37,11 @@ if __name__ == "__main__":
     while True:
         listOfRunningProcess = Process()
         for elem in listOfRunningProcess:
-            result = es.index(index="test-index", body=elem)
+            result = es.index(index="data-6", body=elem)
             #es.index(index="data",body=)
             print(result['result'])
             #Check the values
             #print(elem)
         #mem = psutil.virtual_memory()
-    time.sleep(1)
+    time.sleep(5)
 
